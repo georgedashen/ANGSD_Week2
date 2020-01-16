@@ -1,0 +1,75 @@
+---
+title: "HW-Week2"
+author: "Zhuoyang Chen"
+date: "January 15, 2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Homework Week 2
+
+## Relevance of DNA sequencing
+###1. Why are we actually interested in the order of the DNA’s base pairs? Give an example application of DNA sequencing and its aim/relevance.
+Because the order of DNA or the sequence actually imply our genetic information and the information itself (genotype) can somehow determine the traits of an organism (phynotype). We use DNA sequencing for patients with rare diseases to find out what are the responsible mutations in their DNAs and decide the next action for that i.e. what drugs at what time with what dose.
+
+
+###2. Explain two differences between the traditional Sanger and next-generation-sequencing.
+a. Next-generation-sequencing is high throughput and takes advantages of massively parallel sequencing techniques, while Sanger sequencing is usually with lower volume and much slower.
+
+b. Sanger sequencing utilizes dideoxynucleotides to stop amplification and the fluorescent group attached to them indicates the type of nucleotide where it stops, while in NGS the PCR process is continuous but will form clusters with identical fragments.
+
+
+###3. Find a publication that uses RNA-seq data (tell us how you found it, too). Identify the main question that is being addressed with the RNA-seq data in that paper.
+I found a paper called **Identification of Tissue-Specific Protein-Coding and Noncoding Transcripts across 14 Human Tissue Using RNA-Seq**. I picked some keywords of interest first like RNA-Seq, tissue-specifc, human. Then I used Web Of Science and typed the keywords above, set the searching option to according to title (not to topic as default), and then I just picked one seemed interesting to me.
+
+The main questionin the paper is to identify tissue-specific transcripts in 14 human tissues since many human diseases are due to transcript defect in certain organs and tissues. However there are so many organs and tissues in human and the existing databases we have i.e. BodyMap and GTEx just contain a portion of those tissues. It is necessary to build a dataset with those tissues associated with diseases caused by transcript defect and then try to figure transcripts that are highly expressed in a specific tissue.
+
+
+## Exercises
+###1. Make a foder in which you're going to keep track of everything related to your homework for the ANGSD calss.
+Login the server and then change directory to ~/.ssh, make a new directory called **homework**.
+
+`ssh zhc4002@pascal.med.cornell.edu`  
+`cd ~/.ssh`  
+`mkdir homework`
+
+###2. Download different assemblies of S. cerevisiae from UCSC.
+I opened the UCSC Browser linkage in the file, clicked the **Genomes** icon at the upper section, then clicked the **Yeast** organism icon on the **POPULAR SPECIES** section, rolled down the list and found S. cerevisiae species. I saw the Assembly option on the right and chose different versions of assemblies. Clicked **view sequences** and found the file with suffix "chrom,.sizes" in the bottom. There are totally three assemblies: sacCer1/2/3.chrom.sizes
+
+Download the three files via `wget url` command with the input of addresses where the three files are. Login the server first and copy the addresses following the command `wget`.
+
+`cd homework`  
+`wget http://hgdownload.soe.ucsc.edu/goldenPath/sacCer1/bigZips/sacCer1.chrom.sizes`
+`wget http://hgdownload.soe.ucsc.edu/goldenPath/sacCer2/bigZips/sacCer2.chrom.sizes`
+`wget http://hgdownload.soe.ucsc.edu/goldenPath/sacCer3/bigZips/sacCer3.chrom.sizes`
+
+
+###3. Compare the files of the different assemblies.
+First the notation for chromosome number is different in sacCer1 as it is in Abrabian number and the other two is in Roman number. Also while sacCer2 and 3 have the same amount of chromosomes, their lengths are not the same and in sacCer2 there is an additional 2micron.
+
+
+###4. Make a table listing the sizes for every chromosome accross the 3 different assemblies.
+
+|chr|sacCer1|sacCer2|sacCer3|
+|:---|---:|---:|---:|
+|chr1|230208  |230208 |230218 |
+|chr2|813136  |813178 |813184 |
+|chr3|316613  |316617 |316620 |
+|chr4|1531914 |1531919|1531933|
+|chr5|576869  |576869 |576874 |
+|chr6|270148  |270148 |270161 |
+|chr7|1090944 |1090947|1090940|
+|chr8|562639  |562643 |562643 |
+|chr9|439885  |439885 |439888 |
+|chr10|745446 |745742 |745751 |
+|chr11|666445 |666454 |666816 |
+|chr12|1078173|1078175|1078177|
+|chr13|924430 |924429 |924431 |
+|chr14|784328 |784333 |784333 |
+|chr15|1091285|1091289|1091291|
+|chr16|948060 |948062 |948066 |
+|chrM|85779   |85779  |85779  |
+|2micron| |6318| |
