@@ -210,9 +210,12 @@ summary {
 <h2>Exercises</h2>
 <div id="make-a-foder-in-which-youre-going-to-keep-track-of-everything-related-to-your-homework-for-the-angsd-calss." class="section level3">
 <h3>1. Make a foder in which you’re going to keep track of everything related to your homework for the ANGSD calss.</h3>
-<p>Login the server and then change directory to ~/.ssh, make a new directory called <strong>homework</strong>.</p>
+<p>Login the Gateway pascal and then get into curie, then buddy, step by step. Create my own directory call <strong>zhc4002</strong>, and change to that directory. Make a new directory called <strong>homework</strong>.</p>
 <p><code>ssh zhc4002@pascal.med.cornell.edu</code><br />
-<code>cd ~/.ssh</code><br />
+<code>ssh curie.pbtechge</code><br />
+<code>srun -n1 --pty --partition=angsd_class --mem=2G bash -i</code><br />
+<code>mkdir zhc4002</code><br />
+<code>cd zhc4002</code><br />
 <code>mkdir homework</code></p>
 </div>
 <div id="download-different-assemblies-of-s.-cerevisiae-from-ucsc." class="section level3">
@@ -228,6 +231,7 @@ summary {
 </div>
 <div id="make-a-table-listing-the-sizes-for-every-chromosome-accross-the-3-different-assemblies." class="section level3">
 <h3>4. Make a table listing the sizes for every chromosome accross the 3 different assemblies.</h3>
+<p>open an excel to copy all data including row names with chromosomes into a single sheet. Manually change the roman numebr in version 2 and 3 into numerical number. Then use sort function to sort data from smallest to largest according to the chromosome numbers. Now formating all the data copied from Excel using specific table form in Rmarkdown.</p>
 <table>
 <thead>
 <tr class="header">
@@ -348,6 +352,7 @@ summary {
 </tr>
 </tbody>
 </table>
+<p>At last <strong>git</strong> all the files in Rstudio and commit them.</p>
 </div>
 </div>
 </div>

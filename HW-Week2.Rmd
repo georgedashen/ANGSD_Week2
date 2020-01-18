@@ -30,10 +30,13 @@ The main questionin the paper is to identify tissue-specific transcripts in 14 h
 
 ## Exercises
 ###1. Make a foder in which you're going to keep track of everything related to your homework for the ANGSD calss.
-Login the server and then change directory to ~/.ssh, make a new directory called **homework**.
+Login the Gateway pascal and then get into curie, then buddy, step by step. Create my own directory call **zhc4002**, and change to that directory. Make a new directory called **homework**.
 
 `ssh zhc4002@pascal.med.cornell.edu`  
-`cd ~/.ssh`  
+`ssh curie.pbtechge`  
+`srun -n1 --pty --partition=angsd_class --mem=2G bash -i`  
+`mkdir zhc4002`  
+`cd zhc4002`  
 `mkdir homework`
 
 ###2. Download different assemblies of S. cerevisiae from UCSC.
@@ -52,6 +55,7 @@ First the notation for chromosome number is different in sacCer1 as it is in Abr
 
 
 ###4. Make a table listing the sizes for every chromosome accross the 3 different assemblies.
+open an excel to copy all data including row names with chromosomes into a single sheet. Manually change the roman numebr in version 2 and 3 into numerical number. Then use sort function to sort data from smallest to largest according to the chromosome numbers. Now formating all the data copied from Excel using specific table form in Rmarkdown.
 
 |chr|sacCer1|sacCer2|sacCer3|
 |:---|---:|---:|---:|
@@ -73,3 +77,5 @@ First the notation for chromosome number is different in sacCer1 as it is in Abr
 |chr16|948060 |948062 |948066 |
 |chrM|85779   |85779  |85779  |
 |2micron| |6318| |
+
+At last **git** all the files in Rstudio and commit them.
