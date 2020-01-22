@@ -1,0 +1,22 @@
+---
+title: "Untitled"
+author: "Zhuoyang Chen"
+date: "January 17, 2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## first title
+# second title
+
+```{r}
+x = c(1,2,3,4,5)
+df = data.frame(data = x)
+df
+```
+
+custom output in r like `r x`
+
